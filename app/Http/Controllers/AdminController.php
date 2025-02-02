@@ -30,5 +30,10 @@ class AdminController extends Controller
         }
         return redirect()->back();  
     }
+
+    public function home()
+    {
+        return view('home.index');
+    }
 }
 
