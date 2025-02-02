@@ -2,7 +2,7 @@
 <html lang="en">
 
    <head>
-    @include('home.css')
+        @include('home.css')
    </head>
 
    <body class="main-layout">
