@@ -20,6 +20,10 @@
                      <div class="bed_room">
                         <h3>{{$rooms->room_title}}</h3>
                         <p>{!! Str::limit($rooms->description, 100) !!}</p>
+
+                        <a href="{{url('room_detail', $rooms->id)}}" class="btn btn-primary">Room Details</a>
+
+
                      </div>
                   </div>
                </div>
