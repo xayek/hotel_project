@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use App\Models\Room;
 class Booking extends Model
 {
 
@@ -18,4 +18,9 @@ class Booking extends Model
         'start_date',
         'end_date'
     ];
+
+    public function room()
+    {
+        return $this->hasOne(Room::class, 'id', 'room_id');
+    }
 }

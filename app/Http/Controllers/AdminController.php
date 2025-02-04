@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use App\Models\Room;
-
+use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -108,6 +108,12 @@ class AdminController extends Controller
         $data->save();
         
         return redirect()->back()->with('message', 'Room Updated Successfully');
+    }
+
+    public function bookings()
+    {
+        $data = Booking::all();
+        return view('admin.booking', compact('data'));
     }
 }
 
