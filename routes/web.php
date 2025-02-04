@@ -9,6 +9,9 @@ route::get('/', [AdminController::class, 'home']);
 route::get('/room_details/{id}', [HomeController::class, 'room_details']);
 route::post('/add_booking/{id}', [HomeController::class, 'add_booking']);
 route::post('/contact', [HomeController::class, 'contact']);
+route::get('/our_rooms', [HomeController::class, 'our_rooms']);
+route::get('/hotel_gallary', [HomeController::class, 'hotel_gallary']);
+route::get('/contact_us', [HomeController::class, 'contact_us']);
 
 // Admin işlemleri için middleware'li rotalar
 route::get('/home', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('home');
