@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Room;
 use App\Models\Booking;
 use App\Models\Gallary;
+
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -38,7 +39,9 @@ class AdminController extends Controller
     {   
         $room = Room::all();
 
-        return view('home.index', compact('room'));
+        $gallary = Gallary::all();
+
+        return view('home.index', compact('room', 'gallary'));
     }
 
     public function create_room()
